@@ -116,7 +116,6 @@ const fieldRules = (val: string | null): string | boolean => {
   return !!val || 'Значение не должно быть пустым';
 };
 const appendUser = () => {
-  console.log(MS.defaultRowState);
   displayAccountsList.value.push({ tag: null, type: '2', login: null, password: null });
 };
 const validate = (row: ITaskManager) => {

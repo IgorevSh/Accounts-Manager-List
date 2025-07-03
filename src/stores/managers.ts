@@ -5,7 +5,7 @@ import { useStorage } from '@vueuse/core';
 export const useManagerStore = defineStore('managers', {
   state: () => ({
     managerList: useStorage('managerList', [] as (ITaskManager | null)[]),
-    defaultRowState: { tag: '', type: '2', login: null, password: null },
+    defaultRowStatement: { tag: '', type: '2', login: null, password: null },
     options: [
       { label: 'Локальная ', value: '1' },
       { label: 'LDAP', value: '2' },
@@ -13,7 +13,7 @@ export const useManagerStore = defineStore('managers', {
   }),
   getters: {
     defaultRowState(state) {
-      return state.defaultRowState;
+      return state.defaultRowStatement;
     },
     displayAccountsList(state) {
       return state.managerList.map((itm, i) => {
